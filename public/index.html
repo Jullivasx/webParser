@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webParser</title>
+</head>
+<body>
+    <input id="url" type="text" value="https://google.com"/>
+    <div id="html"></div>
+    <button id="btn">ok</button>
+    <script>
+        async function test() {
+            const res = await fetch('/fetch', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    url: document.getElementById('url').value,
+                }),
+            });
+            const data = await res.json();
+            document.getElementById('html').textContent = data.html;
+            //console.log('data: ' + JSON.stringify(data));
+        }
+        document.getElementById('btn').addEventListener('click', () => {
+            test();
+        });
+    </script>
+</body>
+</html>
