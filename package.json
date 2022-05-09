@@ -1,0 +1,24 @@
+{
+  "name": "webparser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jullivasx/webParser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jullivasx/webParser/issues"
+  },
+  "homepage": "https://github.com/Jullivasx/webParser#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "node-fetch": "^2.6.6"
+  }
+}
